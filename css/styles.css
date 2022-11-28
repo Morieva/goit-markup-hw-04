@@ -11,6 +11,7 @@
   --background-crew-color: #f5f4fa;
   --borderline-card-color: #eeeeee;
   --filter-text: #212121;
+  --icon: #afb1b8;
 }
 /*======================Global==============*/
 body {
@@ -34,7 +35,6 @@ img {
 }
 .link {
   text-decoration: none;
-  display: block;
 }
 .list {
   list-style: none;
@@ -275,18 +275,69 @@ img {
   line-height: 1.19;
   letter-spacing: 0.03em;
   text-align: center;
+  margin-bottom: 16px;
 }
+.media-list {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.media-link {
+  color: var(--icon);
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.media-icon {
+  fill: currentColor;
+}
+.media-link:hover,
+.media-link:focus {
+  background-color: var(--accent-color);
+  color: var(--text-on-dark-color);
+}
+/*Наша команда*/
+
+/*Клієнти*/
+.clients-list {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.clients-item {
+  width: 170px;
+  height: 92px;
+}
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+.clients-link {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--icon);
+}
+.clients-link:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+.clients-icon {
+  fill: currentColor;
+}
+/*Клієнти*/
 /*========Index-Main===========*/
 
 /*===========Portfolio-Main==============*/
-.section-portfolio {
-  display: flex;
-  text-align: center;
-  flex-direction: column;
-  padding: 94px 200px;
-}
 /*======Filter======*/
 .filter-list {
+  display: flex;
+  justify-content: center;
   margin-bottom: 34px;
 }
 .filter-item {
@@ -310,6 +361,14 @@ img {
 .filter-button:focus {
   background-color: var(--accent-color);
   color: var(--text-on-dark-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+.filter-item:hover:focus {
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 /*=======Filter========*/
 
@@ -325,6 +384,14 @@ img {
 .store-card {
   background-color: var(--background-main-color);
   width: 370px;
+}
+.card-link {
+  display: block;
+}
+.card-link:hover,
+.card-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .card-info-container {
   border: 1px solid var(--borderline-card-color);
@@ -345,8 +412,6 @@ img {
   letter-spacing: 0.03em;
   text-align: start;
 }
-
-/**/
 /*======Store=========*/
 /*===========Portfolio-Main==============*/
 
@@ -356,6 +421,12 @@ img {
   color: var(--text-on-dark-color);
   padding: 60px 0px;
 }
+.footer-container {
+  display: flex;
+}
+.address-container {
+  margin-right: 70px;
+}
 .address-list {
   margin-top: 20px;
 }
@@ -363,7 +434,7 @@ img {
   color: var(--text-on-dark-color);
 }
 .location-item {
-  font-style: normal; /*Але для чого якщо в інструментах розробника він і так там приписаний через address-item*/
+  font-style: normal;
 }
 .address-item:not(:last-child) {
   margin-bottom: 9px;
@@ -381,4 +452,38 @@ img {
 }
 .opacity {
   color: #ffffff99;
+}
+.join-container {
+  margin-top: 15px;
+}
+.join-headline {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.join-list {
+  display: flex;
+}
+.join-item:not(:last-child) {
+  margin-right: 10px;
+}
+.join-icon {
+  fill: currentColor;
+}
+.join-link {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-on-dark-color);
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.join-link:hover,
+.join-link:focus {
+  background-color: var(--accent-color);
+  color: var(--text-on-dark-color);
 }
